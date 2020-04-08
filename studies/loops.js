@@ -34,6 +34,10 @@ while(count < 5) {
  * value of count is 4, and the condition is met for the final time, the value will increment once 
  * more to 5. As written, count is actually incremented once more to 5, but 5 isn't being logged to
  * the console because the console.log() occurs before the final increment command. 
+ * 
+ * ETA: While loops are useful when you know exactly how many times you want to perform an action. 
+ * Also, a big pitfall is that you have to be sure to add a stopping condition in the code block or
+ * your program will go into an infinite loop. 
  */
  
 // 2. Example of for loop counting up:

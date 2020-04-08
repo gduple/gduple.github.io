@@ -23,17 +23,26 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
+    // empty array to push integers into 
     var arrayResult = [];
-    
-   if (start < end) {
-    for (var i = start; i <= end; i++) {
-        arrayResult.push(i);
-    }
+    /** If statement to decide which action to take based on which input is bigger.
+    This condition is for first parameter being smaller, so will be counting up.*/
+    if (start < end) {
+        // for loop, start at "start" parameter, stop at "end parameter", increment
+        for (var i = start; i <= end; i++) {
+            // Push every iteration of i into the empty array  
+            arrayResult.push(i);
+        }
+    /** If statement to decide which action to take based on which input is bigger.
+    This condition is for first parameter being bigger, so will be counting down.*/
    } else if (start > end) {
-   for (var i = start; i >= end; i--) {
-       arrayResult.push(i);
-    }
+         // For loop, start at "start" parameter, stop at "end' parameter, decrement
+        for (var i = start; i >= end; i--) {
+            // Push every iteration of i into the empty array  
+            arrayResult.push(i);
+        }
    }
+    // Return empty array outside of if statement
     return arrayResult;
     
     // YOUR CODE GOES ABOVE HERE //
