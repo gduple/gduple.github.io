@@ -1,20 +1,37 @@
 /**
  * CONTROL FLOW:
  *
- * 0. Conditional statements are used to control the flow of a program. By asking a series of true or
- * false questions, we can decide what code will run. 
+ * 0. Conditional statements are used to control the flow of a program. By asking 
+ * a series of true or false questions, we can decide what code will run. 
  *
- * 1. If/else statements begin with an if statement. If the if statement if true, the provided code will run. 
- *
- * 2. An else statement can be supplied at the end as a default if the if statement is false. 
+ * 1. If/else statements begin with an if statement. If the if statement if true, 
+ * the code block will run. An else statement can be supplied at the end as a 
+ * default if the if statement is false. The chain can be lengthened with any 
+ * number of else-if statements after the initial if statement, but there can only 
+ * be one if statement, which must be at the beginning, and there can only be one
+ * else statement (though not required), which much be at the end of the chain.
  * 
- * 3. The chain can be lengthened with else-if statements after the initial if statement. 
- *
- * 4. Switch statements offer another way to build flexbility into code. 
+ * 2. The condition in if and else-if statements are set off by parentheses. 
+ * Following the condition, the code block is set off by curly braces. After the 
+ * code block's closing brace comes the else-if statement (if needed), followed 
+ * by another condition in parentheses. Else statement's implicitly have no 
+ * condition as all other conditions tested returned false. 
  * 
- * 5. Switch statements check a given parameter against a number of options ("cases" in code) and run subsequent
- * code. Care must be taken in writing the code to include break statements at the end of each case to prevent
- * the next case from running. 
+ * 3. The code block is subject to block scope, meaning const and let variables 
+ * declared within them are only accessible inside them. 
+ *
+ * 3. Switch statements offer a different type conditional structure. Switch 
+ * statement are useful when there are numerous possibilities under one condition, 
+ * specifically as in a long chain of nested if-else statements. 
+ * 
+ * 4. A switch statement first evaluates an input expression, which is set in 
+ * parentheses after the keyword switch. The following code block is set off by 
+ * curly braces and includes any number of possible conditions to which the input 
+ * expression is matched. Conditions use the keyword "case", followed by the 
+ * expression to be compared, a colon, and the code to run if a match is found. 
+ * Break statements are used to stop code from running, which is often desired 
+ * before the next case. Multiple case statements, however, can use the same 
+ * block of code before a break statement is added.
  *
  */
  
@@ -30,8 +47,8 @@ if (y < 10 || y > 20) {
     console.log("Out of range. Enter a number between 10 and 20.");
 } else {
     console.log("Number is within range.")
-} /* => "Out of range. Enter a number between 10 and 20."" (The value of the variable met the criteria in the
-if statement since 21 is greater than 20. */
+} /* => "Out of range. Enter a number between 10 and 20."" (The value of the 
+variable met the criteria in the if statement since 21 is greater than 20. */
 
 // 3. If/else-if/else statement:
 var temperature = 70;
@@ -64,4 +81,5 @@ switch (animal) {
     break;
   default:
     console.log('Animal not recognized.');
-} /* => 'cluck cluck': the variable met the 'chicken' case and printed the corresponding message. */
+} /* => 'cluck cluck': the variable met the 'chicken' case and printed the 
+corresponding message. */
