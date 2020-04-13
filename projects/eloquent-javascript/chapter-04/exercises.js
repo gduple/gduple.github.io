@@ -128,22 +128,6 @@ function nth(list, n) { //takes two parameters, an object list, and an index/cou
 // deepEqual ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-// function deepEqual(param1, param2) {
-//   if (param1 === param2) {
-//     return true;
-//   } else if (param1 !== param2) {
-//     return false; 
-//   } else if (param1 === null && param2 === null) {
-//     return true;
-//   } else if (param1 === null || param2 === null) {
-//     return false; 
-//   } else if (typeof param1 === typeof param2) {
-//     /////////////// HERE////////////////////////
-//   } else {
-//     return false; 
-//   }
-// }
-
 function deepEqual(param1, param2) {
   if (param1 === param2) { //if inputs are strictly equal return true
     return true;
