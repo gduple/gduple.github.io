@@ -458,17 +458,17 @@ _.some = function(coll, fn) {//2 params: a collection and a function
 *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
 */
 
-_.reduce = function(coll, fn, seed) { //takes 3 params: coll, function, seed
-    _.each(coll, function(element, i, collection) {//use each for each value
-        if (seed === undefined) {   //if seed is undefined:
-            seed = coll[i]; //seed starts at beginning of loop in fn each
-        } else if (seed) {  //if seed is provided:
-            seed = fn(seed, element, i); //seed seed to function to start calls
-        }
-    });
-    return seed; //return seed out of the function
+_.reduce = function(array, fn, seed) { //params array, function, seed
+    var prevRslt = seed; //set previous result to seed to begin sequence
+    var i = 0;  //i is set to 0 out of the loop so conditional has access
+    if (seed === undefined) {  //if seed is undefined:
+        prevRslt = array[i++]; //set previous result to beginning of loop
+    }
+    for (; i < array.length; i++) { //for loop over array
+        prevRslt = fn(prevRslt, array[i], i); //set prevRslt to fn with prevRslt
+    }                                   //as input so values compile in sequence
+    return prevRslt;    //return final iteration out of the function 
 };
-
 
 /** _.extend
 * Arguments:
