@@ -80,4 +80,3 @@ is Grant. I live in New Orleans. My favorite team is the New Orleans Saints."
 Notice both instances of the parameter were found, because of the global flag. 
 Likewise, both were replaced despite differing capitalization because the of the
 case-insensitive flag. */
-

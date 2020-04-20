@@ -103,5 +103,3 @@ return makeCityState ();        // return the inner function
 
 console.log(makeHometown("New Orleans", "Louisiana")); /* => "My hometown is 
                                                        New Orleans, Louisiana." */
-
-

@@ -256,4 +256,3 @@ var ternaryOperator = 3 < 4 ? false : true;
 console.log(ternaryOperator); /* => false: even though 3 is less than 4, if the 
 condition is true, the operator will only return the first operand after the 
 question mark. */
- 

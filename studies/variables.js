@@ -116,5 +116,3 @@ it's been initialized. */
 // const name = "Grant";        // ...until the line at which it's initialized.
 // console.log(name).   // This code will never run since an error was reached 
                         // on the first line. 
-
-
